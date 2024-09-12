@@ -33,8 +33,8 @@
     <div class="about">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-        mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-        voluptatum laborum numquam blanditiis harum quisquam eius
+        mollitia,molestiae quas vel sint commodi repudiandae consequuntur
+        voluptatum laborumnumquam blanditiis harum quisquam eius
       </p>
     </div>
 
@@ -58,7 +58,7 @@
 
 <style>
   /* COMMON CSS */
-  
+
   :root {
     --background-color: #ebe6e6;
   }
