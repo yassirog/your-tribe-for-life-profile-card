@@ -1,20 +1,14 @@
 <script>
   export let data;
+
 </script>
 
-<html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <main>
+
+
+    
+
       <div class="title"><h1>Profile</h1></div>
-    </main>
+      
     <div class="card">
     <div class="profilepicture">
       <img src={data.person.avatar} alt="Foto van {data.person.name}" />
@@ -27,6 +21,7 @@
     </div>
     <div class="extra-info">
       <h3 class="italic">Front-end Developer</h3>
+    </div>
     </div>
 
 
@@ -45,7 +40,7 @@
         </picture>
         <p>Visitekaart</p>
       </a>
-      <hr />
+      <hr /> 
       <a class="flex" href={data.person.github_handle}>
         <picture>
           <img class="icon" loading="lazy" src="assets/github.png" />
@@ -53,23 +48,14 @@
         <p>Github</p>
       </a>
     </div>
-  </body>
-</html>
+
+    <a><p>ster</p></a>
+
+
+
 
 <style>
   /* COMMON CSS */
-
-  :root {
-    --background-color: #ebe6e6;
-  }
-
-  * {
-    font-family: "Jost", sans-serif;
-  }
-
-  html {
-    background-color: var(--background-color);
-  }
 
   .flex {
     display: flex;
@@ -106,8 +92,9 @@
 
   .card {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    padding: 1em;
+    width: 22.5rem;
   }
 
   .person-info {
@@ -116,7 +103,6 @@
     gap: 16px;
     margin-bottom: -2em;
     margin: 0.5em;
-    margin-left: 1.75em;
   }
 
   .extra-info {
@@ -175,6 +161,8 @@
     gap: 2em;
   }
 
+  
+
   @media (min-width: 600px) {
     img {
       width: 350px;
@@ -183,6 +171,12 @@
     p {
       max-width: 60ch;
       text-align: center;
+    }
+
+    .card {
+      width: 23rem;
+      display: flex;
+      justify-content: center;
     }
   }
 </style>

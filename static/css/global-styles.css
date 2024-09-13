@@ -1,0 +1,18 @@
+:root {
+    --background-color: #ebe6e6;
+  }
+
+html {
+    background-color: var(--background-color);
+}
+
+* {
+    font-family: "Jost", sans-serif;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
