@@ -2,13 +2,8 @@
   export let data;
 
 </script>
-
-
-
-    
-
+<div class="portion">
       <div class="title"><h1>Profile</h1></div>
-      
     <div class="card">
     <div class="profilepicture">
       <img src={data.person.avatar} alt="Foto van {data.person.name}" />
@@ -23,6 +18,7 @@
       <h3 class="italic">Front-end Developer</h3>
     </div>
     </div>
+  </div>
 
 
     <div class="about">
@@ -49,13 +45,11 @@
       </a>
     </div>
 
-    <a><p>ster</p></a>
-
-
 
 
 <style>
   /* COMMON CSS */
+
 
   .flex {
     display: flex;
@@ -67,10 +61,50 @@
   .title {
     display: flex;
     justify-content: center;
-    margin-top: 5em;
+    margin-top: 3em;
   }
 
   /* PROFILEPICTURE */
+
+  .portion {
+    border: black solid 1px;
+    position: relative; /* Om het pseudo-element correct te positioneren */
+    overflow: hidden; /* Zorgt ervoor dat de gloed binnen de grenzen blijft */
+  }
+
+  .portion::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 30%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2); /* Witte gloed met transparantie */
+  transform: rotate(45deg); /* Zorgt ervoor dat de gloed diagonaal beweegt */
+  pointer-events: none; /* Maakt de animatie niet interactief */
+  transition: none; /* Geen animatie tenzij gehoverd */
+  opacity: 0; /* Zorgt ervoor dat het effect onzichtbaar is */
+}
+.portion .card, .portion .person-info, .portion .extra-info {
+  position: relative; /* Zorgt ervoor dat de inhoud onder de gloed blijft */
+  z-index: -1; /* Zet de content onder het pseudo-element */
+}
+
+.portion:hover::before {
+  animation: glimmer 2s infinite; /* Voegt de animatie toe bij hover */
+  opacity: 1; /* Maakt het effect zichtbaar */
+}
+
+@keyframes glimmer {
+  0% {
+    top: -100%;
+    left: -100%;
+  }
+  100% {
+    top: 100%;
+    left: 100%;
+  }
+}
 
   .profilepicture {
     display: flex;
@@ -131,7 +165,6 @@
     display: flex;
     text-align: left;
     margin: 2em;
-    margin-top: -0.5em;
   }
 
   hr {
@@ -145,20 +178,25 @@
   a {
     border-radius: 10px;
     width: 8em;
-    border: none;
     text-align: center;
-    background-color: var(--background-color);
     cursor: pointer;
     color: black;
     text-decoration: none;
+    border: solid black 1px;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  a:hover {
+    transform: rotate3d(180deg);
   }
 
   .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4em;
     gap: 2em;
+
   }
 
   

@@ -4,10 +4,11 @@
 
 html {
     background-color: var(--background-color);
+    background-image: url('/assets/paper.png');
 }
 
 * {
-    font-family: "Jost", sans-serif;
+  font-family: "Indie Flower", cursive;
   }
 
 body {
@@ -15,4 +16,5 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
