@@ -5,6 +5,7 @@
 html {
     background-color: var(--background-color);
     background-image: url('/assets/paper.png');
+    position: relative;
 }
 
 * {

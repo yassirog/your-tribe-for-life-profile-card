@@ -2,6 +2,24 @@
   export let data;
 
 </script>
+<div class="photos">
+  <picture class="foto1">
+    <img src="/assets/arrows.png" loading="lazy" alt="">
+  </picture>
+  <picture class="foto2">
+    <img src="/assets/graffiti.png" loading="lazy" alt="">
+  </picture>
+  <picture class="foto3">
+    <img src="/assets/splatter.png" loading="lazy" alt="">
+  </picture>
+  <picture class="foto4">
+    <img src="/assets/morocco.png" loading="lazy" alt="">
+  </picture>
+  <picture class="foto5">
+    <img src="/assets/arro2.png" loading="lazy" alt="">
+  </picture>
+</div>
+
 <div class="portion">
       <div class="title"><h1>Profile</h1></div>
     <div class="card">
@@ -47,9 +65,49 @@
 
 
 
+
+
 <style>
   /* COMMON CSS */
 
+  .foto1 {
+  position: absolute;
+  top: -10%;  /* Pas deze waarden aan om de positie van de foto te regelen */
+  left: 5%;
+  transform: rotate(45deg);
+}
+
+.foto2 {
+  position: absolute;
+  top: 30%;  /* Willekeurige positie */
+  right: -5%;
+  transform: rotate(20deg);
+}
+
+.foto3 {
+  position: absolute;
+  top: -8%;
+  right: 30%;
+  width: 200px;
+  z-index: -1;
+  transform: rotate(5deg);
+}
+
+.foto4 {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  transform: rotate(-5deg);
+}
+
+.foto5{
+  position: absolute;
+  top: 60%;
+  left: 18%;
+  transform: rotate(30deg);
+
+
+}
 
   .flex {
     display: flex;
@@ -109,6 +167,7 @@
   .profilepicture {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   img {
@@ -196,9 +255,9 @@
     justify-content: center;
     align-items: center;
     gap: 2em;
-
   }
 
+  /* NEW PHOTOS */
   
 
   @media (min-width: 600px) {
@@ -215,6 +274,12 @@
       width: 23rem;
       display: flex;
       justify-content: center;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .photos {
+      display: none;
     }
   }
 </style>
