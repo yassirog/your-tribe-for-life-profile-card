@@ -8,6 +8,9 @@ export async function load() {
   //fetch de data uit de API url en sla het op in deze variable
   const person = await fetchJson(url)
   //return een object waarin persons.data wordt meegegeven
+
+  console.log(person);
+
   return {
     person: person.data
   }
